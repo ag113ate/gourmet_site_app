@@ -1,4 +1,5 @@
 GourmetSiteApp::Application.routes.draw do
+  get "store_web_sites/display"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

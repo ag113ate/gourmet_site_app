@@ -1,0 +1,204 @@
+<div id="header">
+<div id="header_area">
+  <div id="header_logo" class="font_white">グルメサイト</div>
+  
+  <div id="gnavi">
+    <ul>
+      <li><a href="#">ログイン</a></li>
+      <li><a href = "#">会社概要</a></li>
+      <li><a href = "#">サービス</a></li>
+      <li><a href = "#">お問い合せ</a></li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<div id="container">
+<div id="container_area" class="clearfix">
+  <div id="store_name">
+    <div id="store_name_area">
+      ビストロ　ＸＸＸキッチン
+    </div>
+  </div>
+  
+  <div id="main_panel_area">
+    <!-------------- ハンバーグメニューの表示 （開始） -------------->
+    <div class="menu_area clearfix">
+      <div class="menu_title">
+	ハンバーグセット（ライス、スープ、ドリンク<sub><a href="#drink"></a></sub>付き）
+      </div>
+      
+      <div class="image_area image_disp_left clearfix">
+	<%= image_tag("hamburger1.jpg", :alt => "ハンバーグ画像1") %>
+	<%= image_tag("hamburger2.jpg", :alt => "ハンバーグ画像2") %>
+	<%= image_tag("hamburger3.jpg", :alt => "ハンバーグ画像3") %>
+      </div>
+      
+      <div class="menu_desc">
+	柔らかくて、おいしいハンバーグです。<br><br>
+	国産牛100%です。<br><br>
+	ソースは以下から1つ選んでください。
+	<ul>
+	  <li>デミグラスソース</li>
+	  <li>オニオンソース</li>
+	  <li>テリヤキソース</li>
+	</ul>
+	<br>
+	スープは日替わりです。
+	<br><br>
+	ドリンクは<a class="drink_link" href="#drink">こちら</a>からお選びください
+      </div>
+    </div>
+    <!-------------- ハンバーグメニューの表示 （終了） -------------->
+
+    <!-------------- ステーキメニューの表示 （開始） -------------->
+    <div class="menu_area clearfix">
+      <div class="menu_title">
+	ステーキセット（ライス、スープ、ドリンク付き）
+      </div>
+
+      <div class="image_area image_disp_right clearfix">
+	<%= image_tag("steak1.jpg", :alt => "ステーキ画像1") %>
+	<%= image_tag("steak2.jpg", :alt => "ステーキ画像2") %>
+	<%= image_tag("steak3.jpg", :alt => "ステーキ画像3") %>
+      </div>
+      <div class="menu_desc">
+	とにかくおいしいステーキです。<br><br>
+	国産牛100%です。<br><br>
+	ソースは以下から1つ選んでください。
+	<ul>
+	  <li>ガーリック</li>
+	  <li>オニオン</li>
+	  <li>わさび醤油</li>
+	</ul>
+	<br>
+	スープは日替わりです。
+	<br><br>
+	ドリンクは<a class="drink_link" href="#drink">こちら</a>からお選びください
+	
+      </div>
+    </div>
+    <!-------------- ステーキメニューの表示 （終了） -------------->
+    
+    <!-------------- パスタメニューの表示 （開始） -------------->
+    <div class="menu_area clearfix">
+      <div class="menu_title">
+	パスタセット（スープ、ドリンク付き）
+      </div>
+      
+      <div class="image_area image_disp_left clearfix">
+	<%= image_tag("pasta1.jpg", :alt => "パスタ画像1") %>
+	<%= image_tag("pasta2.jpg", :alt => "パスタ画像2") %>
+	<%= image_tag("pasta3.jpg", :alt => "パスタ画像3") %>
+      </div>
+      <div class="menu_desc">
+	おいしいです。<br><br>
+	原料の小麦にもこだわりがあります。<br><br>
+	ソースは以下から1つ選んでください。
+	<ul>
+	  <li>ぺペロンチーノ</li>
+	  <li>ミートソース</li>
+	  <li>カルボナーラ</li>
+	</ul>
+	<br>
+	スープは日替わりです。
+	<br><br>
+	ドリンクは<a class="drink_link" href="#drink">こちら</a>からお選びください
+      </div>
+    </div>
+    <!-------------- パスタメニューの表示 （終了） -------------->
+
+    <!-------------- ドリンクメニューの表示 （開始） ------------>
+    <div id="drink" class="font_white clearfix">
+      <div class="drink_heading">
+	ドリンクは以下からお選びください。
+      </div>
+
+      <div class="drink_sub_heading">
+	<span class="background_green">アイス</span>
+      </div>
+      <div class="drink_menu">
+	<ul>
+	  <li>メロンソーダ</li>
+	  <li>スプライト</li>
+	  <li>コーラ</li>
+	  <li>オレンジジュース</li>
+	  <li>ウーロン茶</li>
+	  <li>アイスコーヒー</li>
+	</ul>
+      </div>
+      <div class="drink_sub_heading">
+	<span class="background_red">ホット</span>
+      </div>
+      
+      <div class="drink_menu">
+	<ul>
+	  <li>レモンティー</li>
+	  <li>ローズヒップティー</li>
+	  <li>グリーンティー</li>
+	  <li>ホットコーヒー</li>
+	</ul>
+      </div>
+      
+    </div>
+  </div>
+  <!-------------- ドリンクメニューの表示 （終了） ------------>
+  
+  <div id="side_bar">
+    <div id="side_bar_area" class="font_white">
+      <div id="reserve_info">
+	<h1 class="under_line put_center">店舗情報</h1>
+	<ul>
+	  <li>店名：ビストロ　ＸＸＸキッチン</li>
+	  <li>住所：東京都千代田区○○-1-2-3</li>
+	  <li>電話番号：123-456-789</li>
+	  <li>営業時間：11:30~21:00</li>
+	  <li>休業日：火曜日</li>
+	</ul>
+	<br>
+	<h1 class="under_line put_center">予約情報</h1>
+	<ul>
+	  <li>　予約日：<input type="date" id="visit_date"></li>
+	  <li class="font_small put_right">※予約可能日は翌日～30日以内です。</li>
+	  <br>
+	  <li>予約人数：<select id="visit_people">
+	      <option value="not_select">--</option>
+	      <option value="1">1</option>
+	      <option value="2">2</option>
+	      <option value="3">3</option>
+	      <option value="4">4</option>
+	      <option value="5">5</option>
+	    </select>
+	  </li>
+	  <br>
+	  <li>予約時間：<input id="visit_time" type="time" min="11:30" max="20:20" step="600">
+	  <li class="font_small put_right">※11:30～20:20でお選びください。</li>
+	  <br>
+	</ul>
+	<div class="put_center">
+	  <input type="submit" id="reserve_button" value="　予約　">
+	</div>
+      </div>
+      <div id="reserve_msg">
+      </div>
+      
+    </div>
+  </div>
+</div>
+</div>
+
+<div id="footer" class="clearfix">
+<div id="footer_area" class="font_white clearfix">
+  <div id="footer_nav">
+    <ul>
+      <li><a href="#">会社概要</a></li>
+      <li><a href="#">サービス</a></li>
+      <li><a href="#">お問い合せ</a></li>
+    </ul>
+  </div>
+
+  <div id="footer_copy">
+    Copyright(C) 2018 gourment Inc. All right Reserved.
+  </div>
+</div>
+</div>
