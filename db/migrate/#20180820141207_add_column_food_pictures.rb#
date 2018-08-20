@@ -1,0 +1,6 @@
+class AddColumnFoodPictures < ActiveRecord::Migration
+  def change
+    # 追加
+    add_column :food
+  end
+end

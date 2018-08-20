@@ -31,32 +31,17 @@
 	        </div>
 
   	      <!------------ 各メニュー画像の表示（開始） ------------>
-  	      
   	      <!-- 料理画像を左右交互に表示 -->
-  	      <% if (loop % 2 == 0) %>
-  	        <div class="image_area image_disp_left clearfix">
-	        <% else %>
-	          <div class="image_area image_disp_right clearfix">
-          <% end %>
+        <% if (loop % 2 == 0) %>
+          <div class="image_area image_disp_left clearfix">
+        <% else %>
+          <div class="image_area image_disp_right clearfix">
+        <% end %>
 	        
-	        <% if true %>
-  	        <% if (loop == 0) %>
-	             <!--ハンバーグ -->
-      	      <%= image_tag("hamburger1.jpg", :alt => "ハンバーグ画像1") %>
-      	      <%= image_tag("hamburger2.jpg", :alt => "ハンバーグ画像2") %>
-      	      <%= image_tag("hamburger3.jpg", :alt => "ハンバーグ画像3") %>
-	          <% elsif (loop == 1) %>
-	            <!--- ステーキ --->
-       	      <%= image_tag("steak1.jpg", :alt => "ステーキ画像1") %> 
-       	      <%= image_tag("steak2.jpg", :alt => "ステーキ画像2") %> 
-       	      <%= image_tag("steak3.jpg", :alt => "ステーキ画像3") %> 
-       	    <% else %>
-       	      <!--- パスタ --->
-       	      <%= image_tag("pasta1.jpg", :alt => "パスタ画像1") %> 
-       	      <%= image_tag("pasta2.jpg", :alt => "パスタ画像2") %> 
-       	      <%= image_tag("pasta3.jpg", :alt => "パスタ画像3") %> 
-       	    <% end %>
-       	  <% end %>
+	          <% food_pictures = @foods_pictures[food_menu.id] %>
+	          <% food_pictures.each do | picture | %>
+	            <%= image_tag(picture.pict_url, :alt => picture.pict_alt) %>
+            <% end %>
        	  </div>
        	  <!------------ 各メニュー画像の表示（終了） ------------>
        	  

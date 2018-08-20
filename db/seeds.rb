@@ -7,7 +7,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-# ハンバーグセット
+# ========================== ハンバーグセット（開始）===========================
+# 料理名、説明分の設定
 FoodMenu.create(:title => "ハンバーグセット（ライス、スープ、ドリンク付き）",
                 :description => \
 "柔らかくて、おいしいハンバーグです。
@@ -21,7 +22,26 @@ FoodMenu.create(:title => "ハンバーグセット（ライス、スープ、�
 
 スープは日替わりです。")
 
-# ステーキセット
+# 画像の設定1
+FoodPicture.create(:food_menus_id => "1", \
+                   :pict_url => "hamburger1.jpg", \
+                   :pict_alt => "ハンバーグ画像1")
+
+# 画像の設定2
+FoodPicture.create(:food_menus_id => "1", \
+                   :pict_url => "hamburger2.jpg", \
+                   :pict_alt => "ハンバーグ画像2")
+
+# 画像の設定3
+FoodPicture.create(:food_menus_id => "1", \
+                   :pict_url => "hamburger3.jpg", \
+                   :pict_alt => "ハンバーグ画像3")
+
+############################ ハンバーグセット（終了）###########################
+
+
+############################# ステーキセット（開始）############################
+# 料理名、説明分の設定
 FoodMenu.create(:title => "ステーキセット（ライス、スープ、ドリンク付き）",
                 :description => \
 "とにかくおいしいステーキです。
@@ -35,7 +55,25 @@ FoodMenu.create(:title => "ステーキセット（ライス、スープ、ド�
 
 スープは日替わりです。 ")
 
-# パスタセット
+# 画像の設定1
+FoodPicture.create(:food_menus_id => "2", \
+                   :pict_url => "steak1.jpg", \
+                   :pict_alt => "ステーキ画像1")
+
+# 画像の設定2
+FoodPicture.create(:food_menus_id => "2", \
+                   :pict_url => "steak2.jpg", \
+                   :pict_alt => "ステーキ画像2")
+
+# 画像の設定3
+FoodPicture.create(:food_menus_id => "2", \
+                   :pict_url => "steak3.jpg", \
+                   :pict_alt => "ステーキ画像3")
+############################# ステーキセット（終了）############################
+
+
+############################## パスタセット（開始）#############################
+# 料理名、説明分の設定
 FoodMenu.create(:title => "パスタセット（スープ、ドリンク付き）",
                 :description => \
 "おいしいです。
@@ -48,3 +86,19 @@ FoodMenu.create(:title => "パスタセット（スープ、ドリンク付き�
 　・カルボナーラ
 
 スープは日替わりです。")
+
+# 画像の設定1
+FoodPicture.create(:food_menus_id => "3", \
+                   :pict_url => "pasta1.jpg", \
+                   :pict_alt => "パスタ画像1")
+
+# 画像の設定2
+FoodPicture.create(:food_menus_id => "3", \
+                   :pict_url => "pasta2.jpg", \
+                   :pict_alt => "パスタ画像2")
+
+# 画像の設定3
+FoodPicture.create(:food_menus_id => "3", \
+                   :pict_url => "pasta3.jpg", \
+                   :pict_alt => "パスタ画像3")
+############################## パスタセット（終了）#############################
