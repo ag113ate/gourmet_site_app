@@ -8,7 +8,38 @@
 </head>
 <body>
 
+<div id="header">
+<div id="header_area">
+  <div id="header_logo" class="font_white">グルメサイト</div>
+  
+  <div id="gnavi">
+    <ul>
+      <li><a href="#">ログイン</a></li>
+    	<li><a href = "#">会社概要</a></li>
+    	<li><a href = "#">サービス</a></li>
+    	<li><a href = "#">お問い合せ</a></li>
+    </ul>
+  </div>
+</div>
+</div>
+
 <%= yield %>
+
+<div id="footer" class="clearfix">
+<div id="footer_area" class="font_white clearfix">
+  <div id="footer_nav">
+    <ul>
+      <li><a href="#">会社概要</a></li>
+      <li><a href="#">サービス</a></li>
+      <li><a href="#">お問い合せ</a></li>
+    </ul>
+  </div>
+
+  <div id="footer_copy">
+    Copyright(C) 2018 gourment Inc. All right Reserved.
+  </div>
+</div>
+</div>
 
 </body>
 </html>

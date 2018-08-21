@@ -1,23 +1,8 @@
-<div id="header">
-<div id="header_area">
-  <div id="header_logo" class="font_white">グルメサイト</div>
-  
-  <div id="gnavi">
-    <ul>
-      <li><a href="#">ログイン</a></li>
-    	<li><a href = "#">会社概要</a></li>
-    	<li><a href = "#">サービス</a></li>
-    	<li><a href = "#">お問い合せ</a></li>
-    </ul>
-  </div>
-</div>
-</div>
-
 <div id="container">
   <div id="container_area" class="clearfix">
     <div id="store_name">
       <div id="store_name_area">
-	ビストロ　ＸＸＸキッチン
+	      ビストロ　ＸＸＸキッチン
       </div>
     </div>
     
@@ -33,13 +18,9 @@
   	      <!-------------- 各メニュー画像の表示（開始） -------------->
   	      <%# 料理画像を左右交互に表示         %>
   	      <%#（classの2つ目の設定値を切り替え）%>
-  	      <% if (loop % 2 == 0)                                    %>
-  	      <%   which_disp = "image_area image_disp_left clearfix"  %>
-  	      <% else                                                  %>
-  	      <%   which_disp = "image_area image_disp_right clearfix" %>
-  	      <% end                                                   %>
+  	      <% which_disp = (loop % 2 == 0) ? ("image_disp_left") : ("image_disp_right") %>
   	      
-  	      <div class=" <%= which_disp %> " >
+  	      <div class=" image_area <%= "#{which_disp}" %> clearfix">
 	          <%  @foods_pictures[food_menu.id].each do | picture |       %>
 	          <%=   image_tag(picture.pict_url, :alt => picture.pict_alt) %>
             <%  end                                                     %>
@@ -67,10 +48,10 @@
 	      <%# アイス(loop=0)、ホット(loop=1)の順で表示 %>
 	      <% for loop in 0..1 do %>
 	        <% temperature_msg = (loop == 0) ? ("アイス") : ("ホット") %>
+	        <% ground_color = (loop == 0) ? ("background_green") : ("background_red") %>
 	        
 	        <div class="drink_sub_heading">
-	          <% ground_color = (loop == 0) ? ("background_green") : ("background_red") %>
-	          <span class= <%= ground_color %> ><%= temperature_msg %></span>
+	          <span class=" <%= ground_color %> "><%= temperature_msg %></span>
   	      </div>
   
     	    <div class="drink_menu">
@@ -130,19 +111,3 @@
 </div> <!-- container -->
 </div> <!-- container_area -->
 
-
-<div id="footer" class="clearfix">
-<div id="footer_area" class="font_white clearfix">
-  <div id="footer_nav">
-    <ul>
-      <li><a href="#">会社概要</a></li>
-      <li><a href="#">サービス</a></li>
-      <li><a href="#">お問い合せ</a></li>
-    </ul>
-  </div>
-
-  <div id="footer_copy">
-    Copyright(C) 2018 gourment Inc. All right Reserved.
-  </div>
-</div>
-</div>
