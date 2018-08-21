@@ -62,38 +62,29 @@
 	      <div class="drink_heading">
 	        ドリンクは以下からお選びください。
 	      </div>
-
-  	    <div class="drink_sub_heading">
-  	      <span class="background_green">アイス</span>
-  	    </div>
+	      
+	      <%# アイス(loop=0)、ホット(loop=1)の順で表示 %>
+	      <% for loop in 0..1 do %>
+	        <% temperature_msg = (loop == 0) ? ("アイス") : ("ホット") %>
+	        
+	        <div class="drink_sub_heading">
+	          <% ground_color = (loop == 0) ? ("background_green") : ("background_red") %>
+	          <span class= <%= ground_color %> ><%= temperature_msg %></span>
+  	      </div>
   
-  	    <div class="drink_menu">
-      	  <ul>
-  	        <li>メロンソーダ</li>
-  	        <li>スプライト</li>
-  	        <li>コーラ</li>
-  	        <li>オレンジジュース</li>
-  	        <li>ウーロン茶</li>
-  	        <li>アイスコーヒー</li>
-  	      </ul>
-  	    </div>
-  	    
-  	    <div class="drink_sub_heading">
-  	      <span class="background_red">ホット</span>
-      	</div>
-  	
-  	    <div class="drink_menu">
-  	      <ul>
-  	        <li>レモンティー</li>
-  	        <li>ローズヒップティー</li>
-  	        <li>グリーンティー</li>
-  	        <li>ホットコーヒー</li>
-  	      </ul>
-      	</div>
+    	    <div class="drink_menu">
+        	  <ul>
+        	    <% hash_val = (loop == 0) ? ("ice") : ("hot") %>
+        	    
+        	    <% @drinks[hash_val].each do |drink| %>
+    	          <li><%= drink.name %></li>
+    	        <% end %>
+    	      </ul>
+    	    </div>
+  	    <% end %>
       </div> <!-- drink -->
       <!------------------- ドリンクメニューの表示 （終了） ------------------->
     </div>  <!-- main_panel_area -->
-    
     
     <div id="side_bar">
     <div id="side_bar_area" class="font_white">

@@ -102,3 +102,20 @@ FoodPicture.create(:food_menus_id => "3", \
                    :pict_url => "pasta3.jpg", \
                    :pict_alt => "パスタ画像3")
 ############################## パスタセット（終了）#############################
+
+
+####################### ドリンクの設定（開始） #################################
+# アイスドリンクの設定
+Drink.create(:temperature => 0, :name => "メロンソーダ"      )
+Drink.create(:temperature => 0, :name => "スプライト"        )
+Drink.create(:temperature => 0, :name => "コーラ"            )
+Drink.create(:temperature => 0, :name => "オレンジジュース"  )
+Drink.create(:temperature => 0, :name => "ウーロン茶"        )
+Drink.create(:temperature => 0, :name => "アイスコーヒー"    )
+
+# ホットドリンクの設定
+Drink.create(:temperature => 1, :name => "レモンティー"      )
+Drink.create(:temperature => 1, :name => "ローズヒップティー")
+Drink.create(:temperature => 1, :name => "グリーンティー"    )
+Drink.create(:temperature => 1, :name => "ホットコーヒー"    )
+####################### ドリンクの設定（終了） #################################
