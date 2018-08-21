@@ -30,20 +30,21 @@
 	          <%= food_menu.title %><sub><a href="#drink"></a></sub>付き）
 	        </div>
 
-  	      <!------------ 各メニュー画像の表示（開始） ------------>
-  	      <!-- 料理画像を左右交互に表示 -->
-        <% if (loop % 2 == 0) %>
-          <div class="image_area image_disp_left clearfix">
-        <% else %>
-          <div class="image_area image_disp_right clearfix">
-        <% end %>
-	        
-	          <% food_pictures = @foods_pictures[food_menu.id] %>
-	          <% food_pictures.each do | picture | %>
-	            <%= image_tag(picture.pict_url, :alt => picture.pict_alt) %>
-            <% end %>
+  	      <!-------------- 各メニュー画像の表示（開始） -------------->
+  	      <%# 料理画像を左右交互に表示         %>
+  	      <%#（classの2つ目の設定値を切り替え）%>
+  	      <% if (loop % 2 == 0)                                    %>
+  	      <%   which_disp = "image_area image_disp_left clearfix"  %>
+  	      <% else                                                  %>
+  	      <%   which_disp = "image_area image_disp_right clearfix" %>
+  	      <% end                                                   %>
+  	      
+  	      <div class=" <%= which_disp %> " >
+	          <%  @foods_pictures[food_menu.id].each do | picture |       %>
+	          <%=   image_tag(picture.pict_url, :alt => picture.pict_alt) %>
+            <%  end                                                     %>
        	  </div>
-       	  <!------------ 各メニュー画像の表示（終了） ------------>
+       	  <!-------------- 各メニュー画像の表示（終了） -------------->
        	  
        	  <!-- 各料理に対しての説明を表示 -->
        	  <div class="menu_desc">
@@ -51,7 +52,7 @@
             <br><br>
             ドリンクは<a class="drink_link" href="#drink">こちら</a>からお選びください
           </div>
-
+          
        	</div> <!-- menu_area -->
       <% end %>
       <!---------------------- 各メニューの表示 （終了） ---------------------->
