@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2018-08-22
+  time: 2018-08-22 00:20:47
+  people: 1
+
+two:
+  date: 2018-08-22
+  time: 2018-08-22 00:20:47
+  people: 1

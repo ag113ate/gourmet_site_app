@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2018-08-21
+  time: 2018-08-21 19:06:52
+  name: MyString
+  phone: MyString
+  people: 1
+
+two:
+  date: 2018-08-21
+  time: 2018-08-21 19:06:52
+  name: MyString
+  phone: MyString
+  people: 1

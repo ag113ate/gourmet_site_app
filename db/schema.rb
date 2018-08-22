@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180820173821) do
+ActiveRecord::Schema.define(version: 20180822003536) do
 
   create_table "drinks", force: true do |t|
     t.integer  "temperature"
@@ -33,6 +33,17 @@ ActiveRecord::Schema.define(version: 20180820173821) do
     t.datetime "updated_at"
     t.string   "pict_url"
     t.string   "pict_alt"
+  end
+
+# Could not dump table "reserve_lists" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
+
+  create_table "reserve_people", force: true do |t|
+    t.date     "date"
+    t.time     "time"
+    t.integer  "people"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
