@@ -1,0 +1,46 @@
+<div id="container">
+  <div id="container_area" class="clearfix">
+    <div id="store_name">
+      <div id="store_name_area">
+	      ビストロ　ＸＸＸキッチン
+      </div>
+    </div>
+    
+    <div id="reserve_area">
+      <div id="reserve_title_area">
+        <span class="background_green font_white">
+          ご希望の時間を選択し、次ページでお客様情報を入力してください。
+          
+        </span>
+      </div>
+      
+    	<table>
+    		<tr>
+    		<% @reserve_peoples.each_with_index do |reserve_people, loop|  %>
+    		<% 	if ( (loop % 9 == 0) && (loop != 0) )                      %>
+    					</tr>
+    					<tr>
+    		<% 	end                                                        %>
+    		
+    		<%  if (loop % 18 == 0)                                        %>
+    		    	 <th rowspan="2"><%= reserve_people.date %></th>
+    		<% 	end                                                        %>
+    		
+    				<td>
+    		<%= reserve_people.time.strftime("%H:%M")                    %>
+    		    <br>
+    		<%  if (reserve_people.people < 5) %>
+    		<%    reserve_date = reserve_people.date.strftime("%Y-%m-%d") \
+    		 		                 + reserve_people.time.strftime("_%H:%M") %>
+    		<%= 		button_to "選択", "/store_web_sites/reserve_form/#{reserve_date}" %>
+    		<%  else %>
+    		     予約不可
+    		<%  end %>
+    				</td>
+    		<% end                                                         %>
+    		</tr>
+    	</table>
+    </div>	
+</div> <!-- container -->
+</div> <!-- container_area -->
+

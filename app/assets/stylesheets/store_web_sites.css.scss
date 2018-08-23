@@ -165,25 +165,6 @@ div#drink .drink_sub_heading{
   text-align: center;
 }
 
-
-div#drink .background_green{
-  background-color: green;
-  padding: 1px;
-
-  -moz-border-radius:10px;/* Firefox用の角丸設定 */
-  -webkit-border-radius:10px; /* Safari,Google Chrome用の角丸設定 */
-  border-radius:10px; /* 角丸設定 */
-}
-
-div#drink .background_red{
-  background-color: red;
-  padding: 1px;
-
-  -moz-border-radius:10px;/* Firefox用の角丸設定 */
-  -webkit-border-radius:10px; /* Safari,Google Chrome用の角丸設定 */
-  border-radius:10px; /* 角丸設定 */
-}
-
 div#drink .drink_menu{
   clear: both;
   margin: 2px 0 0 0;
@@ -264,6 +245,29 @@ div#footer_copy{
   padding: 10px;
 }
 
+
+div#reserve_area{
+  margin: 20px;
+}
+
+div#reserve_area table{
+  border-collapse: collapse;
+  width: 800px;
+  margin: 0 auto;
+  background-color: rgba(115, 184, 226, 0.8);
+}
+
+div#reserve_area th, td{
+  border: solid 1px;
+  text-align:center;
+  vertical-align: middle;
+}
+
+div#reserve_title_area{
+  text-align: center;
+  margin: 5px 0 10px 0;
+}
+
 a:link{
   color: #fff; /* 白色 */
   text-decoration: none; /* 下線はなし */
@@ -309,6 +313,24 @@ a:hover{
   text-indent: -1em;
   padding-left: 1em;
 
+}
+
+.background_green{
+  background-color: green;
+  padding: 1px;
+
+  -moz-border-radius:10px;/* Firefox用の角丸設定 */
+  -webkit-border-radius:10px; /* Safari,Google Chrome用の角丸設定 */
+  border-radius:10px; /* 角丸設定 */
+}
+
+.background_red{
+  background-color: red;
+  padding: 1px;
+
+  -moz-border-radius:10px;/* Firefox用の角丸設定 */
+  -webkit-border-radius:10px; /* Safari,Google Chrome用の角丸設定 */
+  border-radius:10px; /* 角丸設定 */
 }
 
 ul li,ol li {

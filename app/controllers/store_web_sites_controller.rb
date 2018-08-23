@@ -18,4 +18,8 @@ class StoreWebSitesController < ApplicationController
     # ホットドリンク
     @drinks["hot"] = Drink.where(temperature: 1)
   end
+  
+  def reserve_list
+    @reserve_peoples = ReservePeople.all
+  end
 end

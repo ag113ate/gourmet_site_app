@@ -80,27 +80,17 @@
 	        <li>休業日：火曜日</li>
 	      </ul>
         <br>
-        <h1 class="under_line put_center">予約情報</h1>
+        <h1 class="under_line put_center">予約について</h1>
 	      <ul>
-	        <li>　予約日：<input type="date" id="visit_date"></li>
-	        <li class="font_small put_right">※予約可能日は翌日～30日以内です。</li>
-          <br>
-	        <li>予約人数：<select id="visit_people">
-		        <option value="not_select">--</option>
-		        <option value="1">1</option>
-		        <option value="2">2</option>
-	        	<option value="3">3</option>
-        		<option value="4">4</option>
-        		<option value="5">5</option>
-	          </select>
-	        </li>
+	        <li>予約は翌日～30日まで承ります。</li>
 	        <br>
-	        <li>予約時間：<input id="visit_time" type="time" min="11:30" max="20:20" step="600">
-	        <li class="font_small put_right">※11:30～20:20でお選びください。</li>
+	        <li>予約人数は5名様までです。</li>
+	        <li class="font_small">（6名様以上は電話で承ります。）</li>
 	        <br>
+	        <li>閉店時間の30分前まで承ります</li>
 	      </ul>
         <div class="put_center">
-	        <input type="submit" id="reserve_button" value="　予約　">
+	        <%= button_to "日時の選択へ", "/store_web_sites/reserve_list", method: :get %>
 	      </div>
       </div>
     
