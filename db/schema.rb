@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180822003536) do
+ActiveRecord::Schema.define(version: 20180828143337) do
 
   create_table "drinks", force: true do |t|
     t.integer  "temperature"
